@@ -66,7 +66,7 @@ public static class OperationsController
                 if (item.Id == peopleId)
                 {
                     Console.WriteLine("Kişi mevcut, ekleme başarılı...");
-                    ToDoColumn.ToDoColumnList.Add(new CardModel(title, content, peopleId, size));
+                    ToDoLine.ToDoLineList.Add(new CardModel(title, content, peopleId, size));
                     control++;
                 }
             }
@@ -87,7 +87,7 @@ public static class OperationsController
                 int userAddId = ((TeamUserList.TeamList.Count) + 1);
                 TeamUserList.TeamList.Add(new TeamUserModel(userAddId, userAddUsername));
                 Console.WriteLine("Kişi mevcut, ekleme başarılı...");
-                ToDoColumn.ToDoColumnList.Add(new CardModel(title, content, userAddId, size));
+                ToDoLine.ToDoLineList.Add(new CardModel(title, content, userAddId, size));
             }
             else
             {
@@ -173,21 +173,21 @@ public static class OperationsController
                             lineNumber = int.Parse(Console.ReadLine());
                             if (lineNumber == 1)
                             {
-                                ToDoColumn.ToDoColumnList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
+                                ToDoLine.ToDoLineList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
                                 item.Value.Remove(item2);
                                 control++;
                                 break;
                             }
                             else if (lineNumber == 2)
                             {
-                                InProgressColumn.InProgressColumnList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
+                                InProgressLine.InProgressLineList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
                                 item.Value.Remove(item2);
                                 control++;
                                 break;
                             }
                             else if (lineNumber == 3)
                             {
-                                DoneColumn.DoneColumnList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
+                                DoneLine.DoneLineList.Add(new CardModel(item2.Title, item2.Content, item2.PeopleId, item2.Size));
                                 item.Value.Remove(item2);
                                 control++;
                                 break;
@@ -225,6 +225,7 @@ public static class OperationsController
 
     }
 
+    // id'e göre ilgili kişiyi getiren fonksiyonumuz
     public static string PeopleIdToName(int id)
     {
         foreach (var item in TeamUserList.TeamList)
@@ -236,6 +237,8 @@ public static class OperationsController
         }
         return null;
     }
+
+    // kişi listesini ekrana yazdıran fonksiyonumuz
     public static void UserPrint()
     {
         Console.WriteLine("***Kişi Listesi***");
@@ -245,6 +248,9 @@ public static class OperationsController
         }
         Console.WriteLine("***Kişiler Listesinin Sonu***");
     }
+
+    //kullanıcı seçimine göre hangi işlemin gerçekleştirilecekse
+    //o fonksiyonu çağıran fonksiyon
     public static void CallFunction(int number)
     {
         if (number == 1)
@@ -264,15 +270,18 @@ public static class OperationsController
             MoveCard();
         }
     }
+
+    //kullanıcı tarafından girilen operasyon seçiminin doğru seçim aralığında 
+    //olup olmadığını kontrol eden fonksiyon
     public static int ControlFunction(int number)
     {
         if (number >= 1 && number <= 4)
         {
-            return 0;
+            return 1;
         }
         else
         {
-            return 1;
+            return 0;
         }
     }
 
