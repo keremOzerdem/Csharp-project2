@@ -1,60 +1,6 @@
 public static class OperationsController
 {
-    public static void AddUser()
-    {
-
-    }
-
-    public static string PeopleIdToName(int id)
-    {
-        foreach (var item in TeamUserList.TeamList)
-        {
-            if (item.Id == id)
-            {
-                return item.Username;
-            }
-        }
-        return null;
-    }
-    public static void UserPrint()
-    {
-        Console.WriteLine("***Kişi Listesi***");
-        foreach (var item in TeamUserList.TeamList)
-        {
-            Console.WriteLine("Kişi Numarası: {0} , Kişi Adı: {1}", item.Id, item.Username);
-        }
-        Console.WriteLine("***Kişiler Listesinin Sonu***");
-    }
-    public static void CallFunction(int number)
-    {
-        if (number == 1)
-        {
-            PrintBoard();
-        }
-        else if (number == 2)
-        {
-            AddCard();
-        }
-        else if (number == 3)
-        {
-            DeleteCard();
-        }
-        else if (number == 4)
-        {
-            MoveCard();
-        }
-    }
-    public static int ControlFunction(int number)
-    {
-        if (number >= 1 && number <= 4)
-        {
-            return 0;
-        }
-        else
-        {
-            return 1;
-        }
-    }
+    //Uygulama ilk başladığında kullanıcıya yapmak istediği işlemi soran fonksiyon
     public static void StartPrint()
     {
         Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz! : ");
@@ -64,29 +10,8 @@ public static class OperationsController
         Console.WriteLine("(3) Board'dan Kart Silmek");
         Console.WriteLine("(4) Kart Taşımak");
     }
-    public static string EnumToSize(int number)
-    {
-        if (number == 1)
-        {
-            return CardSizeEnumModel.XS.ToString();
-        }
-        else if (number == 2)
-        {
-            return CardSizeEnumModel.S.ToString();
-        }
-        else if (number == 3)
-        {
-            return CardSizeEnumModel.M.ToString();
-        }
-        else if (number == 4)
-        {
-            return CardSizeEnumModel.L.ToString();
-        }
-        else
-        {
-            return CardSizeEnumModel.XL.ToString();
-        }
-    }
+
+    // Board listeleme fonksiyonu
     public static void PrintBoard()
     {
         foreach (var item in BoardModel.BoardModelDict)
@@ -114,6 +39,8 @@ public static class OperationsController
             Console.WriteLine("");
         }
     }
+
+    // Kart ekleme fonksiyonu
     public static void AddCard()
     {
         Console.WriteLine("Başlık Giriniz: ");
@@ -172,6 +99,8 @@ public static class OperationsController
             Console.WriteLine("Hatalı Karakter Girildi, Çıkılıyor...");
         }
     }
+
+    // Kart silme fonksiyonu
     public static void DeleteCard()
     {
         int control = 0;
@@ -208,6 +137,8 @@ public static class OperationsController
             }
         }
     }
+
+    //Kart taşıma fonksiyonu
     public static async void MoveCard()
     {
         int control = 0;
@@ -288,4 +219,85 @@ public static class OperationsController
             }
         }
     }
+
+    public static void AddUser()
+    {
+
+    }
+
+    public static string PeopleIdToName(int id)
+    {
+        foreach (var item in TeamUserList.TeamList)
+        {
+            if (item.Id == id)
+            {
+                return item.Username;
+            }
+        }
+        return null;
+    }
+    public static void UserPrint()
+    {
+        Console.WriteLine("***Kişi Listesi***");
+        foreach (var item in TeamUserList.TeamList)
+        {
+            Console.WriteLine("Kişi Numarası: {0} , Kişi Adı: {1}", item.Id, item.Username);
+        }
+        Console.WriteLine("***Kişiler Listesinin Sonu***");
+    }
+    public static void CallFunction(int number)
+    {
+        if (number == 1)
+        {
+            PrintBoard();
+        }
+        else if (number == 2)
+        {
+            AddCard();
+        }
+        else if (number == 3)
+        {
+            DeleteCard();
+        }
+        else if (number == 4)
+        {
+            MoveCard();
+        }
+    }
+    public static int ControlFunction(int number)
+    {
+        if (number >= 1 && number <= 4)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    public static string EnumToSize(int number)
+    {
+        if (number == 1)
+        {
+            return CardSizeEnumModel.XS.ToString();
+        }
+        else if (number == 2)
+        {
+            return CardSizeEnumModel.S.ToString();
+        }
+        else if (number == 3)
+        {
+            return CardSizeEnumModel.M.ToString();
+        }
+        else if (number == 4)
+        {
+            return CardSizeEnumModel.L.ToString();
+        }
+        else
+        {
+            return CardSizeEnumModel.XL.ToString();
+        }
+    }
+
 }

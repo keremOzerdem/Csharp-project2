@@ -142,7 +142,7 @@ Kart bulunur ise:
 - ** Doğru bir seçim yapılırsa board listelenerek (1) Board Listelemek kullanılarak kullanıcıya gösterilir. Seçim doğru değil ise "Hatalı bir seçim yaptınız!" bilgisi ile işlem sonlandırılabilir.
 
 
-- NOT: Uygulamanın yapısı genel olarak aşağıdaki gibi olmalıdır:
+- NOT: Uygulamanın yapısı genel olarak aşağıdaki gibidir:
 
 
 - Board 3 tane Line dan oluşur.
