@@ -220,9 +220,10 @@ public static class OperationsController
         }
     }
 
-    public static void AddUser()
+    //takım üyelerini atayan fonksiyon
+    public static void AddUser(int id, string name)
     {
-
+        TeamUserList.TeamList.Add(new TeamUserModel(id,name));
     }
 
     // id'e göre ilgili kişiyi getiren fonksiyonumuz

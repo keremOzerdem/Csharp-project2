@@ -1,9 +1,10 @@
 ﻿// Takım üyelerinin ataması
-TeamUserList.TeamList.Add(new TeamUserModel(1, "Ahmet"));
-TeamUserList.TeamList.Add(new TeamUserModel(2, "Aylin"));
-TeamUserList.TeamList.Add(new TeamUserModel(3, "Selin"));
-TeamUserList.TeamList.Add(new TeamUserModel(4, "Mehmet"));
-TeamUserList.TeamList.Add(new TeamUserModel(5, "Selami"));
+OperationsController.AddUser(1, "Ahmet");
+OperationsController.AddUser(2, "Aylin");
+OperationsController.AddUser(3, "Selin");
+OperationsController.AddUser(4, "Mehmet");
+OperationsController.AddUser(5, "Selami");
+
 
 // Default görev ataması
 ToDoLine.ToDoLineList.Add(new CardModel("c#", "c# dersi", 1, CardSizeEnumModel.S.ToString()));
