@@ -21,13 +21,13 @@ Yeni bir console uygulaması üzerinden 3 kolondan oluşan bir TODO uygulamasıd
 ## Açıklama:
 
 
-- Board TODO - IN PROGRESS - DONE kolonlarından oluşmalı.
+- Board TODO - IN PROGRESS - DONE kolonlarından oluşmaktadır.
 
 
-- Varsayılan olarak bir board tanımlı olmalı ve 3 tane de kart barındırmalı.(Kartlar herhangi bir line'da yani kolonda olabilir.)
+- Varsayılan olarak bir board tanımlı olmalı ve 3 tane de kart barındırıyor..(Kartlar herhangi bir line'da yani kolonda olabilir.)
 
 
-- Kartlar ancak takımdan birine atanabilir. Takımdaki kişiler ise varsayılan olarak tanımlanmalı. Takım üyeleri Dictionary kullanılarak key-value pair şeklinde yada bir sınıf aracılığıyla tutulabilir. Kartlara atama yapılırken takım üyeleri ID leri ile atanacak. Yani kullanılacak ypının mutlaka bir ID içermesi gerekir.
+- Kartlar ancak takımdan birine atanabilir. Takımdaki kişiler ise varsayılan olarak tanımlandı.. Takım üyeleri bir sınıf aracılığıyla tutuluyor. Kartlara atama yapılırken takım üyeleri ID leri ile atanacak. Yani kullanılacak ypının mutlaka bir ID içermesi gerekir.
 
 
 - Uygulama ilk başladığında kullanıcıya yapmak istediği işlem seçtirilir.
@@ -84,10 +84,10 @@ Yeni bir console uygulaması üzerinden 3 kolondan oluşan bir TODO uygulamasıd
  Kişi Seçiniz                                    : 
 ```
 
-**Büyüklükler Enum olarak saklanmalı. Kart üzerinde gösterilirken XS olarak gösterilmeli. Giriş yapılırken kullanıcıdan 1 alınmalıdır.
+**Büyüklükler Enum olarak saklanmaktadır. Kart üzerinde gösterilirken XS olarak gösterilmekte. Giriş yapılırken kullanıcıdan 1 alınmaktadır.
 
 
-**Takım üyeleri mevcut bir listede daha tanımlanmış olamlıdır.(Program içerisinde dinamik tanımlanmasına gerek yok.) Kart tanımlarken takım üyesinin ID'si istenmeli. Tanımlı bir ID değilse "Hatalı girişler yaptınız!" uyarısı ile işlem iptal edilebilir.
+**Takım üyeleri mevcut bir listede daha tanımlanmış durumdadır.(Program içerisinde dinamik tanımlanmasına gerek yok.) Kart tanımlarken takım üyesinin ID'si istendi. Tanımlı bir ID değilse "Hatalı girişler yaptınız!" uyarısı ile işlem iptal ediliyor.
 
 
 ### (3) Board'a Kart Silmek
@@ -139,14 +139,14 @@ Kart bulunur ise:
  (2) IN PROGRESS
  (3) DONE
 ```
-- ** Doğru bir seçim yapılırsa board listelenerek (1) Board Listelemek kullanılarak kullanıcıya gösterilir. Seçim doğru değil ise "Hatalı bir seçim yaptınız!" bilgisi ile işlem sonlandırılabilir.
+- ** Doğru bir seçim yapılırsa board listelenerek (1) Board Listelemek kullanılarak kullanıcıya gösterilir. Seçim doğru değil ise "Hatalı bir seçim yaptınız!" bilgisi ile işlem sonlandırılır.
 
 
 - NOT: Uygulamanın yapısı genel olarak aşağıdaki gibidir:
 
 
 - Board 3 tane Line dan oluşur.
-- Her bir line bir kart listesi tutar
+- Her bir line bir kart listesi tutar.
 - Kart ların büyüklükleri pre-defined olan bir enum'da tutulur.
 - Kart sadece takım üyelerinden birine atanabilir.
-- Takım üyeleri daha önceden varsayıla olarak tanımlanmış bir listede olmalı. Struct, class yada bir koleksiyon kullanılabilir.
+- Takım üyeleri daha önceden varsayılan olarak tanımlanmış bir listede bulunmaktadır. Bunun için koleksiyon kullanıldı.
