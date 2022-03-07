@@ -21,7 +21,10 @@ int control = OperationsController.ControlFunction(selectOperation);
 while (control == 1)
 {
     OperationsController.CallFunction(selectOperation);
-    OperationsController.PrintBoard();
+    if (selectOperation != 1)
+    {
+        OperationsController.PrintBoard();
+    }
     OperationsController.StartPrint();
     selectOperation = int.Parse(Console.ReadLine());
     control = OperationsController.ControlFunction(selectOperation);
